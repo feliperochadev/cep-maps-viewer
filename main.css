@@ -1,0 +1,22 @@
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding-top: 0.1px;
+    display: block;
+  }
+
+  div {
+      height: 90%;
+  }
+
+  #map {
+    height: 60%;
+  }
+
+  #addressDetail {
+    height: 40%;
+  }

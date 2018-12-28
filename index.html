@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <h3>Encontrar endereço e coordenadas por CEP:</h3>
+    <form action="javascript:getCEP(textCep.value)">
+        <label>Digite o CEP:</label>
+        <input type="text" id="textCep" class="mdc-text-field__input" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" maxLength="9" size="9" placeholder="00000000" required/>
+        <input type="submit" value="Pesquisar" class="mdc-button"/>
+        <button onclick="clean()" class="mdc-button">Limpar</button>
+    </form>
+    <section id="sectionCEP">
+        <button id="showCEP" onclick="showCEPs()" class="mdc-button">Mostrar CEPs cadastrados</button>
+    </section>
+    <div class="mdc-card" id="addressResult">
+        <div class="mdc-card__primary-action" id="map">
+        </div>
+        <div id="addressDetail">
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrM2JAFNh8SiW7pIEnvBcoj6JIEyFWpxo"
+async defer></script>
+</html>
