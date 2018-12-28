@@ -14,3 +14,4 @@ Resourcers:
 - Add a mark on the address showed in the map
 - Improve validation
 - Improve layout using some style guide like material design or bootstrap.
+- Separate code responsabilities into different files (config, ajax requests, etc).
